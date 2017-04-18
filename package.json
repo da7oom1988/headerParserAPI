@@ -1,0 +1,19 @@
+{
+  "name": "header",
+  "version": "1.0.0",
+  "description": "Fcc requset header parser API project ",
+  "main": "server.js",
+  "engines": {
+    "node": "6.10.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Abdulrahman",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2"
+  }
+}
