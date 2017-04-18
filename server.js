@@ -10,11 +10,14 @@ app.get('/api/whoami',function(req,res){
     var str1 = req.headers['user-agent'];
     var str2 = str1.substring(str1.indexOf("(")+1 , str1.indexOf(")"));
     var obj = {
-        "ipaddress":req.headers.host,
+        "ipaddress":req.connection.remoteAddress,
         "language":req.headers['accept-language'],
         "software":str2};
     console.log(obj);
     res.json(obj);
+});
+app.get('/',function(req,res){
+    res.end("Go to (../api/whoami)");
 });
 
 
