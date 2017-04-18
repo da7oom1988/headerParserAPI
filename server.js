@@ -10,7 +10,7 @@ app.get('/api/whoami',function(req,res){
     var str1 = req.headers['user-agent'];
     var str2 = str1.substring(str1.indexOf("(")+1 , str1.indexOf(")"));
     var obj = {
-        "ipaddress":req.ip,
+        "ipaddress":req.headers.host,
         "language":req.headers['accept-language'],
         "software":str2};
     console.log(obj);
